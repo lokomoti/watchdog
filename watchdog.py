@@ -21,7 +21,6 @@ time.sleep(3)
 
 # Set timeout value and start watchdog
 ser.write(time_out.encode())
-# ser.write(b"0")
 
 # Start infinite loop
 try:
