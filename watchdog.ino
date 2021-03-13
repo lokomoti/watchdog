@@ -1,4 +1,5 @@
-const int rst_pin = 13;
+const int rst_pin = 2;
+const int led_pin = LED_BUILTIN;
 
 int time_out = 0;
 int counter = 0;
@@ -17,9 +18,10 @@ void setup() {
   Serial.println("3 - 180s");
   Serial.println("Reset the counter by sending R character");
   
-
   pinMode(rst_pin, OUTPUT);
+  pinMode(led_pin, OUTPUT);
   digitalWrite(rst_pin, LOW);
+  digitalWrite(led_pin, LOW);
 }
 
 void loop() {
@@ -66,8 +68,10 @@ void handleSerial() {
 
 void reboot() {
   digitalWrite(rst_pin, HIGH);
+  digitalWrite(led_pin, HIGH);
   delay(500);
   digitalWrite(rst_pin, LOW);
+  digitalWrite(led_pin, LOW);
   time_out = 0;
   counter = 0;
 }
