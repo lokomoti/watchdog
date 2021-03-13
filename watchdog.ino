@@ -1,4 +1,4 @@
-const int rst_pin = 2;
+const int rst_pin = 12;
 const int led_pin = LED_BUILTIN;
 
 int time_out = 0;
