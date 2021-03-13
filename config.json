@@ -1,0 +1,5 @@
+{
+    "port": "/dev/cu.usbserial-1410",
+    "timeOut": 0,
+    "interval": 5
+}
